@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity: Water Landing Page</title>
+  
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+  <div class="hero">
+    <div class="header">
+    <span style="display: flex; align-items: center;">
+        <img src="img/cw_logo-2.png" alt="Yellow jerry can symbolizing Charity Water logo, positioned immediately to the left of the bold Charity Water text, both elements conveying hope and positivity in a clean, modern layout" style="height: 40px; margin-right: 2px; vertical-align: middle; display: inline-block;" />
+        <span style="font-size: 2rem; font-weight: bold; font-family: 'Cormorant Garamond', Garamond, serif; margin-left: 0;">Charity: Water</span>
+    </span></span>
+    <h1></h1>
+    </div>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+    <div class="content">
+    <div class="headline" style="position: absolute; top: 1in; left: 0; width: 100%; text-align: center; font-size: 2rem; font-weight: bold; color: #FFF7E1; text-shadow: 0 2px 8px #000; z-index: 2;">
+      A $25 Gift Changed Amina’s Life. Yours Can Too—In Seconds.
+    </div>
+    <div class="side-text" style="position: absolute; top: 35%; right: 5%; width: 30vw; min-width: 260px; background: none; color: #FFC907; padding: 1.5em 1.2em; border-radius: 16px; font-size: 1.1rem; z-index: 3; box-shadow: none;">
+      Clean water for her village means school instead of a daily water walk. Giving through Charity: Water is fast, transparent, and trackable—just tap to change lives.
+    </div>
+    <div style="position: absolute; top: calc(35% + 8.5em); right: 5%; width: 30vw; min-width: 260px; display: flex; justify-content: center; z-index: 3;">
+      <button class="cta-button" id="cta-btn">Tap Here to Give</button>
+    </div>
+    </div>
+  </div>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
-
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  document.getElementById('cta-btn').addEventListener('click', function() {
+    confetti({
+      particleCount: 120,
+      spread: 90,
+      origin: { y: 0.7 }
+    });
+    setTimeout(function() {
+      window.open('https://www.charitywater.org/donate', '_blank');
+    }, 600);
+  });
+</script>
 </body>
+
 </html>
