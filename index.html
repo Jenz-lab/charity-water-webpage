@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity: Water Landing Page</title>
+  
+</head>
+<body>
+  <div class="hero">
+    <div class="header">
+    <span style="display: flex; align-items: center;">
+        <img src="img/cw_logo-2.png" alt="Yellow jerry can symbolizing Charity Water logo, positioned immediately to the left of the bold Charity Water text, both elements conveying hope and positivity in a clean, modern layout" style="height: 40px; margin-right: 2px; vertical-align: middle; display: inline-block;" />
+        <span style="font-size: 2rem; font-weight: bold; font-family: 'Cormorant Garamond', Garamond, serif; margin-left: 0;">Charity: Water</span>
+    </span></span>
+    <h1></h1>
+    </div>
+
+    <div class="content">
+    <div class="headline responsive-headline">
+      A $25 Gift Changed Amina’s Life. Yours Can Too—In Seconds.
+    </div>
+    <div class="side-text-container">
+      <div class="side-text">
+        Clean water for her village means school instead of a daily water walk. Giving through Charity: Water is fast, transparent, and trackable—just tap to change lives.
+      </div>
+      <div class="cta-btn-container">
+        <button class="cta-button" id="cta-btn">Tap Here to Give</button>
+      </div>
+    </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  document.getElementById('cta-btn').addEventListener('click', function() {
+    confetti({
+      particleCount: 120,
+      spread: 90,
+      origin: { y: 0.7 }
+    });
+    setTimeout(function() {
+      window.open('https://www.charitywater.org/donate', '_blank');
+    }, 600);
+  });
+</script>
+</body>
+
+</html>
